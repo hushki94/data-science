@@ -21,6 +21,6 @@ altair
 plotly
 
 ## Deployment Link:
-https://dashboard.render.com/web/srv-ctp55ojtq21c73d22ou0
+https://data-science-iayp.onrender.com/
 
 
