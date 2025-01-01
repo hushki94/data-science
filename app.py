@@ -38,3 +38,7 @@ bar_plot = px.bar(
 )
 st.plotly_chart(bar_plot, use_container_width=True)
 
+st.subheader("Price Distribution")
+price_hist = px.histogram(filtered_data, x="price", nbins=20, title="Price Distribution")
+st.plotly_chart(price_hist, use_container_width=True)
+
