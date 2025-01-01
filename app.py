@@ -7,6 +7,7 @@ data = pd.read_csv("vehicles_us.csv" )
 
 st.title("Interactive Vehicle Data Dashboard")
 
+
 st.sidebar.header("Filters")
 fuel_filter = st.sidebar.multiselect("Select Fuel Type", data['fuel'].unique(), default=data['fuel'].unique())
 condition_filter = st.sidebar.multiselect("Select Condition", data['condition'].unique(), default=data['condition'].unique())
@@ -36,3 +37,4 @@ bar_plot = px.bar(
     labels={'price': 'Average Price', 'type': 'Vehicle Type'}
 )
 st.plotly_chart(bar_plot, use_container_width=True)
+
