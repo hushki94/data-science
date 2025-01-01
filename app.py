@@ -24,3 +24,15 @@ scatter_plot = alt.Chart(filtered_data).mark_circle(size=60).encode(
     height=400
 ).interactive()
 st.altair_chart(scatter_plot, use_container_width=True)
+
+st.subheader("Average Price by Vehicle Type")
+avg_price_by_type = filtered_data.groupby('type')['price'].mean().reset_index()
+bar_plot = px.bar(
+    avg_price_by_type,
+    x='type',
+    y='price',
+    color='type',
+    title="Average Price by Vehicle Type",
+    labels={'price': 'Average Price', 'type': 'Vehicle Type'}
+)
+st.plotly_chart(bar_plot, use_container_width=True)
